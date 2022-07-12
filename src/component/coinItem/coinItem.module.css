@@ -1,0 +1,68 @@
+.items {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  width: 100%;
+  border-radius: 1rem;
+  height: 7rem;
+  box-shadow: 0 5px 20px 0 rgba(28, 29, 33, 0.04);
+}
+
+.items > h1 {
+  font-size: 1.5rem;
+}
+
+.items > p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.num {
+  cursor: pointer;
+  width: 5%;
+}
+
+.name {
+  width: 10%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.price {
+  width: 10%;
+}
+
+.day {
+  width: 10%;
+}
+
+.week {
+  width: 10%;
+}
+
+.market {
+  width: 20%;
+}
+
+.volume {
+  width: 20%;
+}
+
+.grape {
+  width: 20%;
+}
+
+.name > img {
+  width: 3rem;
+  margin-right: 0.5rem;
+}
+
+.name > p {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-left: 0.5rem;
+  background-color: #3330e4;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}

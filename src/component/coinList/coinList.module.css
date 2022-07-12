@@ -1,0 +1,50 @@
+.list {
+  width: 100%;
+}
+
+.list > nav > ul {
+  display: flex;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.list > nav > ul > li {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.num {
+  cursor: pointer;
+  width: 5%;
+}
+
+.list > nav > ul > .name {
+  width: 10%;
+  text-align: left;
+}
+
+.price {
+  width: 10%;
+}
+
+.day {
+  width: 10%;
+}
+
+.week {
+  width: 10%;
+}
+
+.market {
+  width: 20%;
+}
+
+.volume {
+  width: 20%;
+}
+
+.grape {
+  width: 20%;
+}

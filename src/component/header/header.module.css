@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 180rem;
+  margin: 0 auto;
+  height: 5rem;
+}
+
+.center > button {
+  width: 10rem;
+  height: 3rem;
+  margin: 0rem 1rem;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  background: #315f43;
+  color: #fff;
+  border-radius: 1rem;
+  cursor: pointer;
+}

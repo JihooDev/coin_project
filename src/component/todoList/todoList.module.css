@@ -1,0 +1,26 @@
+.list {
+    width: 100%;
+}
+
+form {
+    width: 100%;
+}
+
+form > input {
+    width: 90%;
+    height: 3rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+form > button {
+    width: 10%;
+    height: 3rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    background-color: wheat;
+    border-radius: 1rem;
+    cursor: pointer;
+}
