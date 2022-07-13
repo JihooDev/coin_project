@@ -1,0 +1,83 @@
+.grape {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.container {
+  width: 40%;
+  height: 50%;
+  background-color: #fff;
+  border-radius: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo > img {
+  width: 6rem;
+  margin-top: 1rem;
+}
+
+.logo > h1 {
+  font-size: 5rem;
+}
+
+.now_price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.now_price > p {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.now_price > h1 {
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+path.line {
+  display: none;
+}
+
+.svg_box {
+  width: 50%;
+  height: 200px;
+}
+
+svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  border-radius: 1rem;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}

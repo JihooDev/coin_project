@@ -18,7 +18,6 @@ const CoinList = ({ coinState, rowData, rankData }) => {
           <li className={styles.week}>1주 거래량</li>
           <li className={styles.market}>시가 총액</li>
           <li className={styles.volume}>거래량</li>
-          <li className={styles.grape}>변동 그래프</li>
         </ul>
       </nav>
       {coinState.map((it) => {

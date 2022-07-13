@@ -48,14 +48,15 @@ const App = () => {
 
   //sort 함수
   const rowData = () => {
-    if (rankData) {
+    if (rankData === true) {
       let newArr = [...coinState.sort((a, b) => b.cmc_rank - a.cmc_rank)];
       setCoinState(newArr);
+      setRankData(false);
     } else {
       let newArr = [...coinState.sort((a, b) => a.cmc_rank - b.cmc_rank)];
       setCoinState(newArr);
+      setRankData(true);
     }
-    setRankData(!rankData);
   };
 
   useEffect(() => {

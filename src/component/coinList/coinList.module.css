@@ -30,11 +30,11 @@
 }
 
 .day {
-  width: 10%;
+  width: 20%;
 }
 
 .week {
-  width: 10%;
+  width: 20%;
 }
 
 .market {
@@ -42,9 +42,5 @@
 }
 
 .volume {
-  width: 20%;
-}
-
-.grape {
   width: 20%;
 }
