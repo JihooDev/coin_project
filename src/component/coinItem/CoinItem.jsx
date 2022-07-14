@@ -3,7 +3,7 @@ import styles from "./coinItem.module.css";
 
 import Grape from "../grape/Grape";
 
-const CoinItem = ({ it }) => {
+const CoinItem = ({ it, getCoinData }) => {
   const [modal, setModal] = useState(false);
   const { name, cmc_rank } = it;
   const price = it.quote.USD;
@@ -22,7 +22,14 @@ const CoinItem = ({ it }) => {
 
   return (
     <>
-      {modal ? <Grape data={data} it={it} setModal={setModal} /> : null}
+      {modal ? (
+        <Grape
+          data={data}
+          it={it}
+          setModal={setModal}
+          getCoinData={getCoinData}
+        />
+      ) : null}
       <div className={styles.items} onClick={() => toggleModal(true)}>
         <p className={styles.num}>{cmc_rank}</p>
         <h1 className={styles.name}>
@@ -36,8 +43,8 @@ const CoinItem = ({ it }) => {
         <p className={styles.price}>
           ${price.price.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
         </p>
-        <p className={styles.day}>{price.percent_change_24h.toFixed(5)}</p>
-        <p className={styles.week}>{price.percent_change_7d.toFixed(5)}</p>
+        <p className={styles.day}>{price.percent_change_24h.toFixed(5)}%</p>
+        <p className={styles.week}>{price.percent_change_7d.toFixed(5)}%</p>
         <p className={styles.market}>${price.market_cap.toFixed(2)}</p>
         <p className={styles.volume}>${price.volume_24h.toFixed(2)}</p>
       </div>

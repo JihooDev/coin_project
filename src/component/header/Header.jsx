@@ -56,9 +56,9 @@ const Header = ({ coinData, coinState, setCoinState }) => {
       </div>
       <div className={styles.right}>
         <select name="rows" id="rows" ref={selectRef} onChange={filterData}>
-          <option value="100">100</option>
-          <option value="50">50</option>
-          <option value="20">20</option>
+          <option value="100">100개의 데이터</option>
+          <option value="50">50개의 데이터</option>
+          <option value="20">20개의 데이터</option>
         </select>
       </div>
     </header>

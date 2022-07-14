@@ -4,15 +4,41 @@
 
 .list > nav > ul {
   display: flex;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+  position: relative;
+  align-items: center;
+  background-color: #3333ff;
+  padding: 5px;
+  border-radius: 1rem;
 }
 
 .list > nav > ul > li {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   text-align: center;
-  padding: 0.5rem;
+  padding: 1rem;
+  color: #fff;
+}
+
+li > img {
+  width: 1.5rem;
+}
+
+#redirect {
+  cursor: pointer;
+  width: 2rem;
+  position: absolute;
+  right: 2rem;
+  top: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+#redirect:hover {
+  transform: rotate(180deg);
+}
+
+li > img {
+  width: 1.5rem;
+  cursor: pointer;
 }
 
 .num {

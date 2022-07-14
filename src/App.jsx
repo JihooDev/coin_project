@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
+import "./App.css";
 import CoinList from "./component/coinList/CoinList";
 import Header from "./component/header/Header";
 import Loading from "./component/loading/Loading";
@@ -68,40 +69,43 @@ const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header
-          coinData={coinData}
-          setCoinState={setCoinState}
-          coinState={coinState}
-        />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              load ? (
-                <Loading />
-              ) : (
-                <CoinList
-                  coinData={coinData}
-                  setCoinData={setCoinData}
-                  coinState={coinState}
-                  setCoinState={setCoinState}
-                  rowData={rowData}
-                  rankData={rankData}
+        <div className="container">
+          <Header
+            coinData={coinData}
+            setCoinState={setCoinState}
+            coinState={coinState}
+          />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                load ? (
+                  <Loading />
+                ) : (
+                  <CoinList
+                    coinData={coinData}
+                    setCoinData={setCoinData}
+                    coinState={coinState}
+                    setCoinState={setCoinState}
+                    rowData={rowData}
+                    rankData={rankData}
+                    getCoinData={getCoindata}
+                  />
+                )
+              }
+            />
+            <Route
+              path="/todo"
+              element={
+                <TodoList
+                  todoData={todoData}
+                  setTodoData={setTodoData}
+                  dataId={dataId}
                 />
-              )
-            }
-          />
-          <Route
-            path="/todo"
-            element={
-              <TodoList
-                todoData={todoData}
-                setTodoData={setTodoData}
-                dataId={dataId}
-              />
-            }
-          />
-        </Routes>
+              }
+            />
+          </Routes>
+        </div>
       </BrowserRouter>
     </div>
   );

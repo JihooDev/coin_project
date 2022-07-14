@@ -19,7 +19,8 @@
 }
 
 .items > p {
-  font-size: 1.7rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.05rem;
   font-weight: bold;
   text-align: center;
 }
