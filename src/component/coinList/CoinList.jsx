@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./coinList.module.css";
 import CoinItem from "../coinItem/CoinItem";
 
-const CoinList = ({ coinState, rowData, rankData, getCoinData }) => {
+const CoinList = ({ coinState, rowData, rankData, getCoinData, coinSort }) => {
   const [reRender, setReRender] = useState(false);
 
   const reData = () => {
@@ -21,7 +21,9 @@ const CoinList = ({ coinState, rowData, rankData, getCoinData }) => {
             )}
           </li>
           <li className={styles.name}>이름</li>
-          <li className={styles.price}>가격</li>
+          <li className={styles.price} onClick={coinSort}>
+            가격
+          </li>
           <li className={styles.day}>하루 거래량</li>
           <li className={styles.week}>1주 거래량</li>
           <li className={styles.market}>시가 총액</li>
