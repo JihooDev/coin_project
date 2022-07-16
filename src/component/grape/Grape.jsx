@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import styles from './grape.module.css';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import { motion } from 'framer-motion';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
@@ -58,8 +59,12 @@ const Grape = ({ data, it, setModal, getCoinData }) => {
 	};
 
 	return (
-		<div className={styles.grape} id="grape" onClick={offModal}>
-			<div className={styles.container}>
+		<motion.div className={styles.grape} id="grape" onClick={offModal}>
+			<motion.div
+				initial={{ opacity: 0, transform: 'translateY(10%)' }}
+				animate={{ opacity: 1, transform: 'translateY(0%)', transition: { duration: 1, ease: 'anticipate', easings: 'anticipate' } }}
+				className={styles.container}
+			>
 				<div className={styles.logo}>
 					<h1>{it.name}</h1>
 					<img src={`https://s2.coinmarketcap.com/static/img/coins/64x64/${it.id}.png`} alt="로고" />
@@ -77,8 +82,8 @@ const Grape = ({ data, it, setModal, getCoinData }) => {
 						<div className={styles.days}></div>
 					</div>
 				</div>
-			</div>
-		</div>
+			</motion.div>
+		</motion.div>
 	);
 };
 export default Grape;

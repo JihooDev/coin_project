@@ -6,7 +6,7 @@ import Header from './component/header/Header';
 import Loading from './component/loading/Loading';
 import TodoList from './component/todoList/TodoList';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
-import { select } from 'd3';
+import { motion } from 'framer-motion';
 
 const App = () => {
 	// Coin
