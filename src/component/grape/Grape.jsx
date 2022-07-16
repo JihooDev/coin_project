@@ -16,22 +16,16 @@ const Grape = ({ data, it, setModal, getCoinData }) => {
 		{ id: 0, days: '90일' },
 		{ id: 1, days: '60일' },
 		{ id: 2, days: '30일' },
-		{ id: 3, days: '1일' },
-		{ id: 4, days: '24시간' },
+		{ id: 3, days: '24시간' },
+		{ id: 4, days: '7일' },
 		{ id: 5, days: '1시간' },
 	];
 
 	const options = {
-		plugins: {
-			scales: {
-				y: {
-					beginAtZero: true,
-				},
-			},
-			legend: {
-				labels: {
-					font: 15,
-				},
+		responsive: true,
+		scales: {
+			y: {
+				beginAtZero: true,
 			},
 		},
 	};
@@ -45,9 +39,10 @@ const Grape = ({ data, it, setModal, getCoinData }) => {
 		datasets: [
 			{
 				label: '거래량',
-				data: data,
-				borderColor: 'rgba(255, 99, 132, 0.5)',
-				backgroundColor: 'rgba(255, 99, 132, 0.5)',
+				data: data.map(it => it),
+				borderColor: '#C8F1E2',
+				backgroundColor: 'green',
+				borderWidth: 5,
 			},
 		],
 		options: {
@@ -70,11 +65,13 @@ const Grape = ({ data, it, setModal, getCoinData }) => {
 					<img src={`https://s2.coinmarketcap.com/static/img/coins/64x64/${it.id}.png`} alt="로고" />
 					<div className={styles.now_price}>
 						<h1>현재 평가액</h1>
-						<p>${String(it.quote.USD.price).slice(0, 9)}</p>
+						<p>${it.quote.USD.price}</p>
 					</div>
 				</div>
-				<div className={styles.svg_box}>
-					<Line data={coinData} options={options}></Line>
+				<div className={styles.grape_box}>
+					<div className={styles.grape_data}>
+						<Line data={coinData} options={options} />
+					</div>
 					<p className={styles.price_data}></p>
 					<div className={styles.price}>
 						<div className={styles.days}></div>
